@@ -1,0 +1,13 @@
+#KAFKA_SERVER: 192.168.1.240
+#KAFKA_PORT: 9092
+
+server: 
+  port: 8082
+
+kafka:
+  tunnel:
+    group: tunnelGroup
+  bootstrap-servers: ${KAFKA_SERVER:localhost}:${KAFKA_PORT:9092}
+  topic:
+    consumer: ${TOPIC_PUB:TP_PUB}
+    producer: ${TOPIC_SUB:TP_SUB}
